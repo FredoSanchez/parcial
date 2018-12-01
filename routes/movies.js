@@ -1,30 +1,21 @@
 var express = require('express');
 var router = express.Router();
+var MovieController = require('../controllers/MovieController');
 
 
 /* GET users listing. */
 //Read all
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', MovieController.getAll);
 //Read One
-router.get('/:id', function(req, res, next) {
-    res.send('respond with a resource');
-});
+router.get('/:id', MovieController.getOne);
 
 //Create
-router.post('/', function(req, res, next) {
-    res.send('respond with a resource');
-});
+router.post('/', MovieController.insert);
 
 //Update
-router.put('/:id', function(req, res, next) {
-    res.send('respond with a resource');
-});
+router.put('/:id', MovieController.update);
 
 //Delete
-router.get('/:id', function(req, res, next) {
-    res.send('respond with a resource');
-});
+router.get('/:id', MovieController.delete);
 
 module.exports = router;

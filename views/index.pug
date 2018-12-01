@@ -10,6 +10,7 @@ block content
     label(for="year")
     input#year(type="number", name="year", value="1999", min="1850", max="2025")
     input(type="submit", value="Guardar")
+    .errors
   table
     thead
       tr
@@ -18,3 +19,4 @@ block content
         th Genero
         th Año
         th Opciones
+    tbody.listMovies

@@ -76,14 +76,14 @@ controller.insert = function(req, res){
         } else {
             res.json({
                 ok: true,
-                insert
+                inserted
             });
         }
     });
 };
 
 controller.delete = function(req, res){
-    movieModel.findByIdAndRemove(req.params.id, function(err, eliminado){
+    movieModel.findByIdAndRemove(req.params.id, function(err, deleted){
         if(err){
             res.status(500);
             res.json({
@@ -93,7 +93,7 @@ controller.delete = function(req, res){
         } else {
             res.json({
                 ok: true,
-                eliminado
+                deleted
             });
         }
     });

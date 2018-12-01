@@ -1,5 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Administrador de peliculas
+  form(action="#", method="POST", name = "movieForm")
+    label(for="name") Nombre
+    input#name(type="text" name="name")
+    label(for="gender") Genero
+    input#gender(type="text" name="gender")
+    label(for="year")
+    input#year(type="number", name="year", value="1999", min="1850", max="2025")
+    input(type="submit", value="Guardar")
+  table
+    thead
+      tr
+        th Id
+        th Nombre
+        th Genero
+        th Año
+        th Opciones

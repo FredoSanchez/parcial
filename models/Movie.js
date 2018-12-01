@@ -10,7 +10,7 @@ var MovieSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    year: Date
+    year: Number
 });
 
 module.exports = mongoose.model('Movie', MovieSchema);

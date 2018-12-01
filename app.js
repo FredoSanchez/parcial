@@ -7,14 +7,19 @@ var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var movieRouter = require('./routes/movies')
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb//localhost/parcial', {useNewUrlParser: true})
+
+/*
+mongoose.connect('mongodb://localhost/parcial', {useNewUrlParser: true})
 .then(()=> {console.log('Conectado correctamente')})
 .catch((err)=>{
   console.log('No es posible conectarse');
   console.log(err);
-})
+});
+*/
+
 var app = express();
 
 // view engine setup
@@ -29,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/movies', movieRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

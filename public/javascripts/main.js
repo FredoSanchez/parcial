@@ -1,5 +1,5 @@
 window.onload = () => {
-    app.init;
+    app.init();
 };
 let app = {
     init: function(){

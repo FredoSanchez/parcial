@@ -11,14 +11,14 @@ var movieRouter = require('./routes/movies')
 
 mongoose.Promise = global.Promise;
 
-/*
+
 mongoose.connect('mongodb://localhost/parcial', {useNewUrlParser: true})
 .then(()=> {console.log('Conectado correctamente')})
 .catch((err)=>{
   console.log('No es posible conectarse');
   console.log(err);
 });
-*/
+
 
 var app = express();
 

@@ -1,23 +1,26 @@
 extends layout
 
 block content
-  h1 Administrador de peliculas
-  form(action="#", method="POST", name = "movieForm")
-    label(for="name") Nombre
-    input#name(type="text" name="name")
-    label(for="gender") Genero
-    input#gender(type="text" name="gender")
-    label(for="year")
-    input#year(type="number", name="year", value="1999", min="1850", max="2025")
-    input(type="submit", value="Guardar")
-    .errors
-  table
-    thead
-      tr
-        th Id
-        th Nombre
-        th Genero
-        th Año
-        th Opciones
-    tbody.listMovies
+  title peliculas
+  #wrapper
+    #titulo      
+      i(class= "fas fa-film")
+      h1 Administrador de peliculas
+    #llenado
+      form(action="#", method="POST", name = "movieForm")
+        input#name(type="text" name="name" placeholder="Nombre")
+        input#gender(type="text", name="gender", placeholder="Genero")
+        input#year(type="number", name="year", value="1999", min="1850", max="2025")
+        input#guardar(type="submit", value="Guardar")
+        .errors
+    #tabla
+      table
+        thead
+          tr
+            th Id
+            th Nombre
+            th Genero
+            th Año
+            th Opciones
+        tbody.listMovies
   script(src="/javascripts/main.js")

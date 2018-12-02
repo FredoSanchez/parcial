@@ -1,8 +1,58 @@
 body {
-  padding: 50px;
+  margin: 0;
+  padding: 0 6em;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+h1{
+
+
+  font-family: 'Kumar One Outline', cursive;
+
+
+}
+
+
+#wrapper {
+  margin: 0 6em;
+  display: flex;
+  flex-direction: column;
+}
+
+#titulo {
+  padding: 0;
+  margin: 1px;
+  background-color: #ffe7c2;
+  height: 5em;
+}
+
+#llenado {
+  background-color: #e3e8ed;
+  height: 15em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#llenado input{
+  margin: 2em;
+}
+
+table {
+  width: 100%;
+}
+
+table thead {
+  background-color: #b0e6f7;
+  height: 4em;
+}
+
+#guardar{
+  background-color: #0c944f;
+  color: white;
+  padding: 0;
+  border-radius: 2px;
 }
